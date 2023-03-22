@@ -134,13 +134,10 @@ main {
   border: none;
   cursor: pointer;
   outline: none;
-  display: flex;
 }
 
-.task input {
-  border-radius: 5px;
-  padding: 20px;
-  border: none;
+.toggle ~ div{
+  text-decoration: line-through;
 }
 
 /*

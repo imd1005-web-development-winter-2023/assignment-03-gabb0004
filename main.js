@@ -4,12 +4,12 @@ document.querySelector("#push").onclick = function () {
   } else {
     document.querySelector("#tasks").innerHTML += `
       <div class="task">
-      <input type="checkbox">
+      <input type="checkbox" id="toggle">
       <span id="taskname">
       ${document.querySelector("#newtask input").value}
       </span>
       <button class="delete">
-      <i class="far fa-trash-all"></i>
+      <i class="far fa-trash-alt"></i>
       </button>
       </div>
     `;
@@ -20,5 +20,11 @@ document.querySelector("#push").onclick = function () {
         this.parentNode.remove();
       };
     }
+  }
+  
+  const complete = document.querySelector("#toggle");
+  if(complete.checked){
+    // document.getElementById("#taskname").style.textDecorationLine="line-through";
+    console.log("complete");
   }
 };
