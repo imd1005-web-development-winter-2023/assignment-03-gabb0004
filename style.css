@@ -28,13 +28,12 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+  background-color: var(--colour-cello);
   height: 100%;
 }
 
 main {
   min-height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +46,7 @@ main {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background: white;
+  background: var(--colour-wedgewood);
   min-height: 100px;
   border-radius: 10px;
 }
@@ -60,15 +59,11 @@ main {
 #newtask input {
   width: 75%;
   height: 45px;
-  border: 2px solid grey;
+  border: none;
   padding: 12px;
   position: relative;
   border-radius: 5px;
-}
-
-#newtask input:focus {
-  outline: none;
-  border-color: lightskyblue;
+  background-color: var(--colour-aquaisland);
 }
 
 #newtask button {
@@ -83,7 +78,7 @@ main {
 }
 
 #tasks {
-  background-color: white;
+  background-color: var(--colour-wedgewood);
   margin-top: 10px;
   padding: 30px 20px;
   border-radius: 10px;
@@ -105,7 +100,7 @@ main {
 }
 
 .task {
-  background-color: #c5e1e6;
+  background-color: var(--colour-aquaisland);
   height: 50px;
   margin-bottom: 8px;
   padding: 5px 10px;
@@ -113,7 +108,7 @@ main {
   border-radius: 5px;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #939697;
+  border: none;
   cursor: pointer;
 }
 
@@ -126,10 +121,10 @@ main {
 }
 
 .task button {
-  background: #0d75ec;
+  background: red;
   color: white;
   height: 100%;
-  width: 40px;
+  width: 45px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -138,6 +133,12 @@ main {
 
 .toggle ~ div{
   text-decoration: line-through;
+}
+
+@media (max-width: 450px){
+  .container{  
+    background-color: white;
+  }
 }
 
 /*
