@@ -4,13 +4,13 @@ document.querySelector("#push").onclick = function () {
   } else {
     document.querySelector("#tasks").innerHTML += `
       <div class="task">
-      <input type="checkbox" id="toggle">
-      <span id="taskname">
-      ${document.querySelector("#newtask input").value}
-      </span>
-      <button class="delete">
-      <i class="far fa-trash-alt"></i>
-      </button>
+        <input type="checkbox" id="toggle">
+        <span id="taskname">
+          ${document.querySelector("#newtask input").value}
+        </span>
+        <button class="delete">
+          <i class="far fa-trash-alt"></i>
+        </button>
       </div>
     `;
 
@@ -23,27 +23,27 @@ document.querySelector("#push").onclick = function () {
   }
 };
 
-document.addEventListener("click", function (e){
-  const complete = e.target.closest("#toggle");
-  if (complete.checked){
-    var taskname = document.getElementById("#taskname");
-    taskname.style.textDecorationLine="line-through";
+const div = document.getElementsByClassName("task");
+
+div.addEventListener("click", (event)=>{
+  if(event.target.tagName==='input'){
+    console.log(done);
   }
-});
+})
 
-
-
-
-// const complete = document.querySelector("#toggle");
-// document.querySelector(complete).onclick = function(){
-//   if(document.querySelector("#toggle").checked){
-//     document.getElementById("#taskname").style.textDecorationLine="line-through";
-//     console.log("checked");
+// const checkbox=document.getElementById("toggle");
+// checkbox.addEventListener('change', e=>{
+//   if(e.target.checked===true){
+//     console.log("checkbox is checked - boolean value: ", e,target.checked);
+//   }else if(e.target.checked===false){
+//     console.log("checkbox is not checked - boolean value: ", e.target.checked);
 //   }
-// }
+// });
 
-// const complete = document.querySelector("#toggle");
-// if(complete.checked){
-//   // document.getElementById("#taskname").style.textDecorationLine="line-through";
-//   console.log("complete");
-// }
+// document.addEventListener("click", function (e){
+//   const complete = e.target.closest("#toggle");
+//   if (complete.checked===true){
+//     var taskname = document.getElementById("#taskname");
+//     taskname.style.textDecorationLine="line-through";
+//   }
+// });
