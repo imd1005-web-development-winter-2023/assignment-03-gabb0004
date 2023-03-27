@@ -135,9 +135,10 @@ main {
   text-decoration: line-through;
 }
 
-@media (max-width: 450px){
-  .container{  
-    background-color: white;
+@media (max-width: 750px){
+  .container{
+    width: 40%;
+    border: 1px solid red;
   }
 }
 

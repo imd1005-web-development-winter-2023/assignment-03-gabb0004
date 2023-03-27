@@ -21,10 +21,29 @@ document.querySelector("#push").onclick = function () {
       };
     }
   }
-  
-  const complete = document.querySelector("#toggle");
-  if(complete.checked){
-    // document.getElementById("#taskname").style.textDecorationLine="line-through";
-    console.log("complete");
-  }
 };
+
+document.addEventListener("click", function (e){
+  const complete = e.target.closest("#toggle");
+  if (complete.checked){
+    var taskname = document.getElementById("#taskname");
+    taskname.style.textDecorationLine="line-through";
+  }
+});
+
+
+
+
+// const complete = document.querySelector("#toggle");
+// document.querySelector(complete).onclick = function(){
+//   if(document.querySelector("#toggle").checked){
+//     document.getElementById("#taskname").style.textDecorationLine="line-through";
+//     console.log("checked");
+//   }
+// }
+
+// const complete = document.querySelector("#toggle");
+// if(complete.checked){
+//   // document.getElementById("#taskname").style.textDecorationLine="line-through";
+//   console.log("complete");
+// }
