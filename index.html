@@ -15,30 +15,26 @@
 
     <!-- This is where all of our awesome CSS code goes -->
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css"
+    />
 
     <!-- Set the Favicon  -->
     <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
   </head>
   <body>
-    <!--
-
-      ADD YOUR ASSIGNMENT 03 CODE
-
-      YOU MAY REMOVE THE BOILERPLATE CODE BELOW
-
-      IMPORTANT CHECKLIST:
-
-      - Are users able to create and delete to do list items?
-      - Have you set a favicon? (included - but it's a rocket)
-      - Do you have a css reset file? (included)
-      - Has a team member conducted a code review and left a GitHub Issue in your repo?
-      - Have you conducted a code review and left a GitHub Issue on your team member's repo?
-
-    -->
-    <main>
-      <div id="app"></div>
-    </main>
-
+    <div class="content">
+      <div class="container">
+        <div id="newtask">
+          <input type="text" placeholder="Task to be done ..." />
+          <button id="push">Add</button>
+        </div>
+        <div id="tasks">
+          <h2>Tasks</h2>
+        </div>
+      </div>
+    </div>
     <!-- This is where we add our awesome JavaScript code -->
     <script src="./main.js"></script>
   </body>

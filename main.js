@@ -1,44 +1,49 @@
-//
-//  JS File
-//  You may remove the code below - it's just boilerplate
-//
+document.querySelector("#push").onclick = function () {
+  if (document.querySelector("#newtask input").value.length == 0) {
+    alert("Please enter a task");
+  } else {
+    document.querySelector("#tasks").innerHTML += `
+      <div class="task">
+        <input type="checkbox" id="toggle">
+        <span id="taskname">
+          ${document.querySelector("#newtask input").value}
+        </span>
+        <button class="delete">
+          <i class="far fa-trash-alt"></i>
+        </button>
+      </div>
+    `;
 
-//
-// Variables
-//
-
-// Constants
-const appID = "app";
-const headingText = "To do. To done. ✅";
-
-// Variables
-
-// DOM Elements
-let appContainer = document.getElementById(appID);
-
-//
-// Functions
-//
-
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
+    var current_tasks = document.querySelectorAll(".delete");
+    for (var i = 0; i < current_tasks.length; i++) {
+      current_tasks[i].onclick = function () {
+        this.parentNode.remove();
+      };
+    }
   }
+};
 
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
+const div = document.getElementsByClassName("task");
 
-  // Init complete
-  console.log("App successfully initialised");
-}
+div.addEventListener("click", (event)=>{
+  if(event.target.tagName==='input'){
+    console.log(done);
+  }
+})
 
-//
-// Inits & Event Listeners
-//
+// const checkbox=document.getElementById("toggle");
+// checkbox.addEventListener('change', e=>{
+//   if(e.target.checked===true){
+//     console.log("checkbox is checked - boolean value: ", e,target.checked);
+//   }else if(e.target.checked===false){
+//     console.log("checkbox is not checked - boolean value: ", e.target.checked);
+//   }
+// });
 
-inititialise();
+// document.addEventListener("click", function (e){
+//   const complete = e.target.closest("#toggle");
+//   if (complete.checked===true){
+//     var taskname = document.getElementById("#taskname");
+//     taskname.style.textDecorationLine="line-through";
+//   }
+// });

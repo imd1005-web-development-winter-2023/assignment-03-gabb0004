@@ -28,15 +28,118 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+  background-color: var(--colour-cello);
+  height: 100%;
 }
 
 main {
   min-height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  width: 40%;
+  min-width: 450px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: var(--colour-wedgewood);
+  min-height: 100px;
+  border-radius: 10px;
+}
+
+#newtask {
+  position: relative;
+  padding: 30px 20px;
+}
+
+#newtask input {
+  width: 75%;
+  height: 45px;
+  border: none;
+  padding: 12px;
+  position: relative;
+  border-radius: 5px;
+  background-color: var(--colour-aquaisland);
+}
+
+#newtask button {
+  position: relative;
+  float: right;
+  width: 20%;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0d75ec;
+  color: white;
+}
+
+#tasks {
+  background-color: var(--colour-wedgewood);
+  margin-top: 10px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+}
+
+#task {
+  background-color: #c5e1e6;
+  height: 50px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  cursor: pointer;
+}
+
+.task {
+  background-color: var(--colour-aquaisland);
+  height: 50px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  cursor: pointer;
+}
+
+.task span {
+  font-family: "poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  width: 100%;
+  padding-left: 5px;
+}
+
+.task button {
+  background: red;
+  color: white;
+  height: 100%;
+  width: 45px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.toggle ~ div{
+  text-decoration: line-through;
+}
+
+@media (max-width: 750px){
+  .container{
+    width: 40%;
+    border: 1px solid red;
+  }
 }
 
 /*
